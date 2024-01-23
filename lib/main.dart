@@ -16,7 +16,9 @@ class MyApp extends StatelessWidget {
       title: 'BiteChronicles',
       theme:
           ThemeData(primaryColor: TColor.primarycolor1, fontFamily: "Poppins"),
-      home: const OnBoardingView(),
+      home: const OnBoardingView(
+        pObj: {},
+      ),
     );
   }
 }
