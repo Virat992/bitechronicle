@@ -3,8 +3,8 @@ import 'package:bitechronicle/common_widget/on_boarding_page.dart';
 import 'package:flutter/material.dart';
 
 class OnBoardingView extends StatefulWidget {
-  final Map pObj;
-  const OnBoardingView({super.key, required this.pObj});
+  //final Map pObj;
+  const OnBoardingView({super.key});
 
   @override
   State<OnBoardingView> createState() => _OnBoardingViewState();
@@ -13,6 +13,7 @@ class OnBoardingView extends StatefulWidget {
 class _OnBoardingViewState extends State<OnBoardingView> {
   int selectPage = 0;
   PageController controller = PageController();
+  //final TColor _tColor = TColor();
 
   @override
   void initState() {
@@ -52,7 +53,7 @@ class _OnBoardingViewState extends State<OnBoardingView> {
 
   @override
   Widget build(BuildContext context) {
-    var media = MediaQuery.of(context).size;
+    //var media = MediaQuery.of(context).size;
 
     return Scaffold(
       backgroundColor: TColor.white,
@@ -87,7 +88,7 @@ class _OnBoardingViewState extends State<OnBoardingView> {
                   width: 60,
                   height: 60,
                   decoration: BoxDecoration(
-                    color: TColor.primarycolor1,
+                    color: TColor.primaryColor1,
                     borderRadius: BorderRadius.circular(35),
                   ),
                   child: IconButton(
@@ -95,8 +96,16 @@ class _OnBoardingViewState extends State<OnBoardingView> {
                     onPressed: () {
                       if (selectPage < 3) {
                         selectPage = selectPage + 1;
-                        controller.jumpToPage(selectPage);
-                      } else {}
+                        controller.animateToPage(selectPage,
+                            duration: const Duration(microseconds: 600),
+                            curve: Curves.bounceInOut);
+                        setState(() {});
+                      } else {
+                        /*Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => SignUpView()));*/
+                      }
                     },
                   ),
                 ),

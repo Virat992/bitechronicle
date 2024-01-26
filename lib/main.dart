@@ -1,5 +1,5 @@
 import 'package:bitechronicle/common/colo_extension.dart';
-import 'package:bitechronicle/view/on_boarding/on_boarding_view.dart';
+import 'package:bitechronicle/common_widget/started_view.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -13,12 +13,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'BiteChronicles',
-      theme:
-          ThemeData(primaryColor: TColor.primarycolor1, fontFamily: "Poppins"),
-      home: const OnBoardingView(
-        pObj: {},
-      ),
-    );
+        title: 'BiteChronicles',
+        theme: ThemeData(
+            primaryColor: TColor.primaryColor1, fontFamily: "Poppins"),
+        home: const StartedView());
   }
 }
