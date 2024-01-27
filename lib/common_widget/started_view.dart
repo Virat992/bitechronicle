@@ -50,7 +50,7 @@ class _StartedViewState extends State<StartedView> {
               const Spacer(),
               SafeArea(
                 child: Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 15),
+                  padding: const EdgeInsets.symmetric(horizontal: 20),
                   child: RoundButton(
                     title: "Get Started",
                     type: isChangeColor
@@ -71,7 +71,7 @@ class _StartedViewState extends State<StartedView> {
                     },
                   ),
                 ),
-              )
+              ),
             ],
           )),
     );

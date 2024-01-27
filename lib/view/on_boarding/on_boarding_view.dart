@@ -1,5 +1,6 @@
 import 'package:bitechronicle/common/colo_extension.dart';
 import 'package:bitechronicle/common_widget/on_boarding_page.dart';
+import 'package:bitechronicle/view/login/signup_view.dart';
 import 'package:flutter/material.dart';
 
 class OnBoardingView extends StatefulWidget {
@@ -101,10 +102,10 @@ class _OnBoardingViewState extends State<OnBoardingView> {
                             curve: Curves.bounceInOut);
                         setState(() {});
                       } else {
-                        /*Navigator.push(
+                        Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => SignUpView()));*/
+                                builder: (context) => SignUpView()));
                       }
                     },
                   ),
